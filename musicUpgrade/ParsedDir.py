@@ -1,0 +1,3 @@
+class ParsedDir:
+    playlist = ""
+    tracks = []

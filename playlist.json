@@ -1,0 +1,380 @@
+{
+    "href": "https://api.spotify.com/v1/users/11136385296/playlists?offset=0&limit=10",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/1EoDKOIZX8IrwiQOzws1Av"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1EoDKOIZX8IrwiQOzws1Av",
+        "id": "1EoDKOIZX8IrwiQOzws1Av",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d2d885c08daccf13c6c304ce",
+            "width": 640
+          }
+        ],
+        "name": "testPlaylist",
+        "owner": {
+          "display_name": "Lukáš Galbička",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/11136385296"
+          },
+          "href": "https://api.spotify.com/v1/users/11136385296",
+          "id": "11136385296",
+          "type": "user",
+          "uri": "spotify:user:11136385296"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NixiZGJlNDY2YjE1ZTAwMDI3ZjgwMTgxYjI1MjdmMzQzM2UwOGJkYTM1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/1EoDKOIZX8IrwiQOzws1Av/tracks",
+          "total": 3
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1EoDKOIZX8IrwiQOzws1Av"
+      },
+      {
+        "collaborative": false,
+        "description": "Fold time and space through sound to reach imaginary universes.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX4ZEXyWinp6f"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4ZEXyWinp6f",
+        "id": "37i9dQZF1DX4ZEXyWinp6f",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000032c05106ebd0a70fbf6f67e82",
+            "width": null
+          }
+        ],
+        "name": "Sci-Fi Scapes",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": false,
+        "snapshot_id": "MTYxNTQ4NzgzMSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4ZEXyWinp6f/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX4ZEXyWinp6f"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/6zhsCRoiVTrxadaI1ApgWs"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6zhsCRoiVTrxadaI1ApgWs",
+        "id": "6zhsCRoiVTrxadaI1ApgWs",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb0a51a683e46c7acf674e514d",
+            "width": null
+          }
+        ],
+        "name": "Chee's Blappers & Slappers",
+        "owner": {
+          "display_name": "Chee",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/wtfischee"
+          },
+          "href": "https://api.spotify.com/v1/users/wtfischee",
+          "id": "wtfischee",
+          "type": "user",
+          "uri": "spotify:user:wtfischee"
+        },
+        "primary_color": null,
+        "public": false,
+        "snapshot_id": "MjM1LDVlYzgzNzA3M2FkZGIxZDA4NDEyNjQxMGU4NDQ1YzFkOGIzMjZiYzk=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/6zhsCRoiVTrxadaI1ApgWs/tracks",
+          "total": 55
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6zhsCRoiVTrxadaI1ApgWs"
+      },
+      {
+        "collaborative": false,
+        "description": "Updated Weekly! DC and Hooks selected jams from Deadbeats record label and beyond. DEADBEATS ON TOUR NOW--&gt; <a href=\"http://www.deadbeatsofficial.com\">www.deadbeatsofficial.com</a>",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/1puyOVU3elVRRIblfAnQ8Q"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1puyOVU3elVRRIblfAnQ8Q",
+        "id": "1puyOVU3elVRRIblfAnQ8Q",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb523e394781d9965da8214c34",
+            "width": null
+          }
+        ],
+        "name": "Zeds Dead's Deadbeats",
+        "owner": {
+          "display_name": "Zeds Dead",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/zedsdeadofficial"
+          },
+          "href": "https://api.spotify.com/v1/users/zedsdeadofficial",
+          "id": "zedsdeadofficial",
+          "type": "user",
+          "uri": "spotify:user:zedsdeadofficial"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MzY5MCxjN2NmZDYyN2NmOWVjNDAxYzYwOTA5MWExMjQ3NzA1NDZhYTY4MThl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/1puyOVU3elVRRIblfAnQ8Q/tracks",
+          "total": 105
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1puyOVU3elVRRIblfAnQ8Q"
+      },
+      {
+        "collaborative": false,
+        "description": "It aint a house party without some house music! (Make sure Crossfade is turned on in your settings for seamless transitions.)",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/5TYDmtUhZY9nkSMWQjBG1w"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5TYDmtUhZY9nkSMWQjBG1w",
+        "id": "5TYDmtUhZY9nkSMWQjBG1w",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebbc652f87d6d41a0ef0980aa20",
+            "width": null
+          }
+        ],
+        "name": "Deadbeats House Party",
+        "owner": {
+          "display_name": "Deadbeats",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/deadbeatsrecords"
+          },
+          "href": "https://api.spotify.com/v1/users/deadbeatsrecords",
+          "id": "deadbeatsrecords",
+          "type": "user",
+          "uri": "spotify:user:deadbeatsrecords"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NjksYTFhN2FlMDI0MjBlYTg0MzJhOGVmNTU0ZGYzMDJkZDRkYjQ3ZTNiZQ==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/5TYDmtUhZY9nkSMWQjBG1w/tracks",
+          "total": 35
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5TYDmtUhZY9nkSMWQjBG1w"
+      },
+      {
+        "collaborative": false,
+        "description": "Things about to get Ruff. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/3UTxTXGojDXOleteGRaLhz"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3UTxTXGojDXOleteGRaLhz",
+        "id": "3UTxTXGojDXOleteGRaLhz",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb26a4bb80c0c5b1dcfbd0e9c9",
+            "width": null
+          }
+        ],
+        "name": "The Ruff Stuff: Underground Bass Jams",
+        "owner": {
+          "display_name": "Deadbeats",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/deadbeatsrecords"
+          },
+          "href": "https://api.spotify.com/v1/users/deadbeatsrecords",
+          "id": "deadbeatsrecords",
+          "type": "user",
+          "uri": "spotify:user:deadbeatsrecords"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "NjEsMzA0ZmUzYjNiN2Q4NjA2NzA2OTA3Mjg3YTkxYjA2MTU3NDJlOWIzMw==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/3UTxTXGojDXOleteGRaLhz/tracks",
+          "total": 43
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3UTxTXGojDXOleteGRaLhz"
+      },
+      {
+        "collaborative": false,
+        "description": "Our entire collection of Deadbeats releases, organized chronologically in one place.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/2VgzU3TxG7SC9oM7Pi6oJ9"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2VgzU3TxG7SC9oM7Pi6oJ9",
+        "id": "2VgzU3TxG7SC9oM7Pi6oJ9",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebb3743f287d6642498910df852",
+            "width": null
+          }
+        ],
+        "name": "We Are Deadbeats: Complete Collection (Full Release Catalog)",
+        "owner": {
+          "display_name": "Deadbeats",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/deadbeatsrecords"
+          },
+          "href": "https://api.spotify.com/v1/users/deadbeatsrecords",
+          "id": "deadbeatsrecords",
+          "type": "user",
+          "uri": "spotify:user:deadbeatsrecords"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MTU4LDgwYTM4OTdjODI2NzliZjM2YThmOGM2YTcwMDAzMGQyZGViMTA5YmY=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/2VgzU3TxG7SC9oM7Pi6oJ9/tracks",
+          "total": 450
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2VgzU3TxG7SC9oM7Pi6oJ9"
+      },
+      {
+        "collaborative": false,
+        "description": "GTA - Vice City (OST) - Volume 6: Fever 105. As presented by Oliver &quot;Ladykiller&quot; Biscuit.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/1Ex0QfLhPG0pDFUOwkxPy8"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1Ex0QfLhPG0pDFUOwkxPy8",
+        "id": "1Ex0QfLhPG0pDFUOwkxPy8",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706c0000bebbbc9b2dadb0a7638b3819d591",
+            "width": null
+          }
+        ],
+        "name": "GTA - Vice City: Fever 105",
+        "owner": {
+          "display_name": "mcflystudio",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/lneusol53430lr47t1bfmbg1y"
+          },
+          "href": "https://api.spotify.com/v1/users/lneusol53430lr47t1bfmbg1y",
+          "id": "lneusol53430lr47t1bfmbg1y",
+          "type": "user",
+          "uri": "spotify:user:lneusol53430lr47t1bfmbg1y"
+        },
+        "primary_color": null,
+        "public": false,
+        "snapshot_id": "MTYsYmE5NWRlMjNiMjY4YjVkZjcwNmYyMDUzYmFhYzBhYjA1NTZjZGJkYQ==",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/1Ex0QfLhPG0pDFUOwkxPy8/tracks",
+          "total": 13
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1Ex0QfLhPG0pDFUOwkxPy8"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/6fSULEvwycupdpQWlkcMBY"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6fSULEvwycupdpQWlkcMBY",
+        "id": "6fSULEvwycupdpQWlkcMBY",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2739ec321789857e6e237da8f27",
+            "width": 640
+          }
+        ],
+        "name": "DJ Phil Harris Tut",
+        "owner": {
+          "display_name": "Lukáš Galbička",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/11136385296"
+          },
+          "href": "https://api.spotify.com/v1/users/11136385296",
+          "id": "11136385296",
+          "type": "user",
+          "uri": "spotify:user:11136385296"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MyxmZDlmMDJjY2Y1NjJmOGUzMGIxMTgwOGY0ZGYwZTJiYzk3MTJjNTRl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/6fSULEvwycupdpQWlkcMBY/tracks",
+          "total": 2
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6fSULEvwycupdpQWlkcMBY"
+      },
+      {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/6kyiOn7PzMh4bf4TicoIdN"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6kyiOn7PzMh4bf4TicoIdN",
+        "id": "6kyiOn7PzMh4bf4TicoIdN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://mosaic.scdn.co/640/ab67616d0000b27309a90531b85be7899c3234c4ab67616d0000b2730f35726025e0f025da4c688fab67616d0000b2736b3fa88bdd4af566fbbf2bbfab67616d0000b273a388a3f20d1bf2123249cc79",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://mosaic.scdn.co/300/ab67616d0000b27309a90531b85be7899c3234c4ab67616d0000b2730f35726025e0f025da4c688fab67616d0000b2736b3fa88bdd4af566fbbf2bbfab67616d0000b273a388a3f20d1bf2123249cc79",
+            "width": 300
+          },
+          {
+            "height": 60,
+            "url": "https://mosaic.scdn.co/60/ab67616d0000b27309a90531b85be7899c3234c4ab67616d0000b2730f35726025e0f025da4c688fab67616d0000b2736b3fa88bdd4af566fbbf2bbfab67616d0000b273a388a3f20d1bf2123249cc79",
+            "width": 60
+          }
+        ],
+        "name": "Spotalike: Arctic Monkeys - When the Sun Goes Down",
+        "owner": {
+          "display_name": "Lukáš Galbička",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/11136385296"
+          },
+          "href": "https://api.spotify.com/v1/users/11136385296",
+          "id": "11136385296",
+          "type": "user",
+          "uri": "spotify:user:11136385296"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "MiwzNjY5MmEyYTcxODA2YjhjYTQxNzk1MjZkMDE2OTU3MDZlY2RmYjdh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/6kyiOn7PzMh4bf4TicoIdN/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6kyiOn7PzMh4bf4TicoIdN"
+      }
+    ],
+    "limit": 10,
+    "next": "https://api.spotify.com/v1/users/11136385296/playlists?offset=10&limit=10",
+    "offset": 0,
+    "previous": null,
+    "total": 163
+  }
