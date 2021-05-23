@@ -1,6 +1,7 @@
 import json
 import re
 import subprocess
+import os
 
 
 def testJsonParsing():
@@ -44,5 +45,47 @@ def testPlaylist():
     lists = f.read().split("\n")
     print (str(lists))
 
+
+def deleteStupidWord(veta):
+    znovaVeta = ""
+    for slovo in veta.split(" "):
+        print (slovo)
+        if not re.search("[^\x00-\x7F]+", slovo):
+            znovaVeta += slovo + " "
+    return znovaVeta[0:-1]
 # testJsonParsing()
-testLen()
+# print (deleteStupidWord( "björk  áll is fúll of love chrisô su remix Düsseldorf, Köln, Москва, 北京市, إسرائيل !@#$'"))
+
+pathToDir = "D:\\newDUB\\"
+# for root, subdirs, files in os.walk(pathToDir):
+#     print (root)
+
+def getDesiredPlaylists(name):
+    f = open(name, "r")
+    return f.read().split("\n")
+
+
+pathToDir = "D:\\newDUB\\"
+files = os.listdir(pathToDir)
+
+listOld = getDesiredPlaylists("DesiredPlaylists.txt")
+listNew = getDesiredPlaylists("DesiredPlaylistsNew.txt")
+
+savifyDeprecated = []
+savifyActual = []
+
+for subor in files:
+    if subor in listOld and subor not in listNew:
+        savifyDeprecated.append(subor)
+
+    if subor in listNew:
+        savifyActual.append(subor)
+    
+
+savifyDeprecated.sort()
+savifyActual.sort()
+# for name in savifyDeprecated:
+#     print(name)
+
+for name in savifyActual:
+    print(name)

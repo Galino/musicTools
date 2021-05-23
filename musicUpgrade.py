@@ -1,4 +1,3 @@
-
 # import subprocess
 from musicUpgrade.musicSearcher import getUrls
 from musicUpgrade.DirWalk import dirWalk
@@ -8,13 +7,14 @@ import json
 import subprocess
 import os
 
-#dir |Rename-Item -NewName {$_.name -replace  "^[0-1][0-9]", "Wolfmother"}
+
+# dir |Rename-Item -NewName {$_.name -replace  "^[0-1][0-9]", "Wolfmother"}
 
 def createSpotifyPlaylist(playlistName):
     print("create spotify playlist...")
     url = 'https://api.spotify.com/v1/users/11136385296/playlists'
-    myobj = "{\"name\":\"" + playlistName + "_LF" + "\",\"description\":\""+ playlistName +"\",\"public\":false}"
-    response = requests.post(url, data = myobj, headers = settings.HEADER)
+    myobj = "{\"name\":\"" + playlistName + "_LF" + "\",\"description\":\"" + playlistName + "\",\"public\":false}"
+    response = requests.post(url, data=myobj, headers=settings.HEADER)
     json_data = json.loads(response.text)
     # print(json.dumps(json_data, indent=4, sort_keys=True)) # prettify json
     print("create Playlist response - \"{}\" - ".format(response))
@@ -24,31 +24,35 @@ def createSpotifyPlaylist(playlistName):
     playlistInfo['url'] = json_data['external_urls']['spotify']
 
     return playlistInfo
-    
+
 
 def fillSpotifyPlaylist(playlistID, trackUris):
     print("fill spotify playlist...")
     url = 'https://api.spotify.com/v1/playlists/' + playlistID + '/'
-    print ("TRACK URIS - " + str(trackUris))
+    print("TRACK URIS - " + str(trackUris))
     tracksUrl = 'tracks?uris=' + makeTracksAsQueryString(trackUris)
-    response = requests.post(url+tracksUrl, headers = settings.HEADER)
+    response = requests.post(url + tracksUrl, headers=settings.HEADER)
     print("Add items to Playlist response - \"{}\" - ".format(response))
+
 
 def makeTracksAsQueryString(trackUris):
     queryStr = ""
     for uri in trackUris:
         queryStr = queryStr + uri.replace(":", "%3A") + "%2C"
-    return queryStr[:-3] #remove last escape seq
+    return queryStr[:-3]  # remove last escape seq
 
-def createOutputDirectory(parentDir, dir):  
+
+def createOutputDirectory(parentDir, dir):
     # Path 
     path = os.path.join(parentDir, dir)
-    if not(os.path.exists(path)):
+
+    if not (os.path.exists(path)):
         os.mkdir(path)
-        print("Directory '%s' created" % dir) 
+        print("Directory '%s' created" % dir)
     else:
-        print ("Directory '%s' already existed" % dir)
+        print("Directory '%s' already existed" % dir)
     return path
+
 
 def donwloadSpotifyPlaylist(output, url):
     savify = "savify -q best"
@@ -60,9 +64,9 @@ def donwloadSpotifyPlaylist(output, url):
     print("download spotify playlist: " + cmd)
     p1 = subprocess.run(cmd, shell=True)
     print(p1)
-    
 
-pathToDir = "D:\\DUB\\Moby"
+
+pathToDir = "D:\\DUB\\SpotifyLocalFiles\\The Chillstep Dealer"
 outputDir = "D:\\newDUB"
 
 print("starting")
@@ -72,14 +76,13 @@ for dir in allParsedDirs:
     print("tracks = ", dir.tracks)
     playlistInfo = createSpotifyPlaylist(dir.playlist)
     x = 0
-    while(True):
-        tenTracks = dir.tracks[x:x+10]
+    while (True):
+        tenTracks = dir.tracks[x:x + 10]
         spotifyUris = getUrls(dir.playlist, tenTracks)
-    
+
         fillSpotifyPlaylist(playlistInfo['id'], spotifyUris)
 
-
-        x = x+10
+        x = x + 10
         if x > len(dir.tracks):
             break
 
@@ -93,16 +96,6 @@ print("End of app")
 # add Songs to playlist
 
 # call Savify upont created Playlist
-
-
-
-
-
-
-
-
-
-
 
 
 # url = 'https://api.spotify.com/v1/users/11136385296/playlists'

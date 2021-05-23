@@ -21,7 +21,7 @@ def obtainPlaylistInfo(userId):
         playlistToUrl.update(processPlaylistsIntoDict(json_data))
         offset = json_data["offset"] + limit
         total = json_data["total"]
-        print (total)
+        print ("total:" , total)
     return  playlistToUrl
 
 
@@ -29,6 +29,7 @@ def processPlaylistsIntoDict(playlistsAsJson):
     json_data = playlistsAsJson
     # print(json.dumps(json_data, indent=4, sort_keys=True)) # prettify json
     playlistInfo = dict()
+    print(json_data)
     for item in json_data["items"]:
         playlistInfo[item["name"]] = item["external_urls"]["spotify"]
         

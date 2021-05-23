@@ -9,9 +9,11 @@ def getUrls(playlist, fileOrigNames):
     # spotifyTrackSearch = "Zomboy%20%20Like%20A%20Bitch%20"
     tracksUris = []
     for fileOrigName in fileOrigNames:
+        if ("jpg" in fileOrigName):
+            continue
         spotifyTrackSearch = getTrackForSpotifySearch(fileOrigName)
         print("spotifyTrackName = \"" , spotifyTrackSearch + "\"")
-        if (spotifyTrackSearch == ""):
+        if (spotifyTrackSearch.strip() == ""):
            writeToSongsSpotifyIsMissing(fileOrigName, playlist, spotifyTrackSearch.replace("%20", " ")) 
            continue
         response = requests.get(buildUrl(spotifyTrackSearch), headers = settings.HEADER)
@@ -71,17 +73,25 @@ def getTrackForSpotifySearch(track):
         modifiedTrack = re.sub(r"[0-1][0-9](-| -)", "", modifiedTrack)
         modifiedTrack = re.sub(r" x ", " ", modifiedTrack)
         modifiedTrack = re.sub(r"-","", modifiedTrack)
+        modifiedTrack = deleteStupidWord(modifiedTrack)
         modifiedTrack  = modifiedTrack.replace(" ", "%20")
         return modifiedTrack         
     else:
         return ""
+
+def deleteStupidWord(veta):
+    znovaVeta = ""
+    for slovo in veta.split(" "):
+        if not re.search("[^\x00-\x7F]+", slovo):
+            znovaVeta += slovo + " "
+    return znovaVeta[0:-1]
         
 
 #  trackURL - json_data['tracks']['items'][0]['external_urls']['spotify']
 #  trackName - json_data['tracks']['items'][0]['name']
 #  artist -  json_data['tracks']['items'][0]['artists'][0]['name']
 def writeToSongsSpotifyIsMissing(origName, playlistName, songName):
-    f = open("blackList.txt", "a")
+    f = open("blackList.txt", "a", encoding="utf-8")
     f.write(origName  + " - " + playlistName + " - " + songName + "\n")
     f.close()
 
