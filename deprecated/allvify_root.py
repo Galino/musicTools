@@ -1,16 +1,12 @@
-import requests
 import json
 import subprocess
-import os
 import re
-from lib import settings
 from lib import utils
 import allvify.playlist_obtainer as po
 
 
-from savify import Savify
-from savify.types import Type, Format, Quality
-from savify.utils import PathHolder
+from obtainer import Savify
+
 
 # cmd = "savify -q best -o testPlaylist -t playlist https://open.spotify.com/playlist/1EoDKOIZX8IrwiQOzws1Av?si=Jp6_75GyQvO1_uyJ4o1qUA"
 
@@ -50,10 +46,10 @@ def printUserPlaylists(userId):
         keyEdit = re.sub('[^a-z|A-Z|0-9|]+', '',key)
         print (keyEdit , (50 - length) * ".", url)
 
-def obtainSongFromDesiredPlatlits(userId):
-    playlistToUrl = po.obtainPlaylistInfo(userId=userId)
+def obtainSongsFromDesiredPlatlits(userId, accessToken, desiredPlaylist = "DesiredPlaylistsNew.txt"):
+    playlistToUrl = po.obtainPlaylistInfo(userId=userId, accessToken=accessToken)
 
-    desiredPlaylists = getDesiredPlaylists("DesiredPlaylistsNew.txt")
+    desiredPlaylists = getDesiredPlaylists(desiredPlaylist)
     parentDir = "D:\\newDUB\\spotifyMusic\\"
 
     for key, url in playlistToUrl.items():
@@ -71,8 +67,11 @@ def obtainSongFromDesiredPlatlits(userId):
 
 
 # REMEMBER - bearer I copy into header allow me to obtain only PUBLIC playlists
-userId = "11136385296"
-obtainSongFromDesiredPlatlits(userId)
+# userId = "11136385296"
+# obtainSongsFromDesiredPlatlits(userId)
+
+
+
 
 # printUserPlaylists(userId=userId)
 
