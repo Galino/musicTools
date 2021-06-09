@@ -5,9 +5,9 @@ import json
 from obtainer import *
 
 PORT_NUMBER = 8080
-SPOTIPY_CLIENT_ID = '2b716b05be6e40a38c49aff0e59e878c'
-SPOTIPY_CLIENT_SECRET = '2ecf43c20f2b490ab3fdcea9a312ee23'
-SPOTIPY_REDIRECT_URI = 'http://localhost:8080'
+
+# SPOTIFY CLIENT INFO
+
 SCOPE = 'user-library-read, playlist-read-private, playlist-read-collaborative'
 CACHE = '.spotipyoauthcache'
 
