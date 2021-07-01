@@ -10,9 +10,9 @@ PORT_NUMBER = 8080
 # SPOTIFY CLIENT INFO
 spotifyClient = open('SPOTIFY_CLIENT.txt', "r")
 spotiSplit = spotifyClient.read().split("\n")
-SPOTIPY_CLIENT_ID = spotiSplit[0].split("=")[1] #'2b716b05be6e40a38c49aff0e59e878c'
-SPOTIPY_CLIENT_SECRET = spotiSplit[1].split("=")[1] #'2ecf43c20f2b490ab3fdcea9a312ee23'
-SPOTIPY_REDIRECT_URI = spotiSplit[2].split("=")[1] #'http://localhost:8080'
+SPOTIPY_CLIENT_ID = spotiSplit[0].split("=")[1]
+SPOTIPY_CLIENT_SECRET = spotiSplit[1].split("=")[1]
+SPOTIPY_REDIRECT_URI = spotiSplit[2].split("=")[1]
 
 SCOPE = 'user-library-read, playlist-read-private, playlist-read-collaborative, playlist-modify-public, playlist-modify-private'
 CACHE = '.spotipyoauthcache'
@@ -55,7 +55,9 @@ def index():
         sp = spotipy.Spotify(access_token)
         desiredPlaylists = getDesiredPlaylists("DesiredPlaylistsTEST.txt")
         filteredPlaylists = []
+        print("Playlists:")
         for playlist in obtainAllPlaylistComplet(sp):
+            print(stripName(playlist['name']))
             if (stripName(playlist['name'])) in desiredPlaylists:
                 filteredPlaylists.append(playlist)
 
@@ -72,18 +74,23 @@ def index():
 
 
 def removeDuplicatesFromMyLibrary(filteredPlaylists, sp):
+    print("Going to remove duplicates from Library")
     for i, playlist in enumerate(filteredPlaylists):
+        print("Check Playlist - " + playlist['name'])
         playlistItems = obtainAllItemsOfPlaylist(sp, playlist['id'])
         for item in playlistItems:
             track = item['track']
+            print("Checking track " + str(track['name']) + " from " + str(playlist['name']))
             occuredInPlaylits = [playlist]
             if (i + 1 == len(filteredPlaylists)):
                 break
             for otherPlaylist in filteredPlaylists[i + 1:]:
                 otherPlaylistItems = obtainAllItemsOfPlaylist(sp, otherPlaylist['id'])
 
-                if playlistItemsContainTrack(otherPlaylistItems, track['id']):
+                if playlistItemsContainTrack(otherPlaylistItems, track['id']) and playlist['name'] != otherPlaylist['name']:
+                    print("track is also in " + str(otherPlaylist['name']))
                     occuredInPlaylits.append(otherPlaylist)
+                    print("actual list of occurences: " + str(occuredInPlaylits))
             # skip non-duplicates
             if (len(occuredInPlaylits) <= 1):
                 continue
@@ -91,25 +98,28 @@ def removeDuplicatesFromMyLibrary(filteredPlaylists, sp):
             artists = []
             for artist in track['artists']:
                 artists.append(artist['name'])
-            print("Found " + str(artists) + " - " + track['name'] + " in playlists: ")
+            print("Found " + str(artists) + " - " + str(track['name']) + " in playlists: ")
             for i, occurrence in enumerate(occuredInPlaylits):
-                print(str(i + 1) + ") " + occurrence['name'])
+                print(str(i + 1) + ") " + str(occurrence['name']))
             print("Let track only in playlist:")
 
             go = False
+            choseNum = 0
             while (go != True):
                 # chosen = msvcrt.getch()  # this will load as byte value b'
                 chosen = getch.getch()
                 print(chosen)
-                choseNum = int(chosen)
-                if (choseNum > len(occuredInPlaylits)):
+                if (not (chosen.isdigit()) or int(chosen) > len(occuredInPlaylits)):
                     print("Choose number 1-", len(occuredInPlaylits))
                 else:
+                    choseNum = int(chosen)
                     go = True
             playlistNum = choseNum - 1
 
             occuredInPlaylits.remove(occuredInPlaylits[playlistNum])
             removeItemFromPlaylists(sp, occuredInPlaylits, track)
+            occuredInPlaylits = []
+        print("done")
 
 
 def printResultPlaylistNames(sp):
